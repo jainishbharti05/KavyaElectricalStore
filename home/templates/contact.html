@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block title %}Contact |{% endblock title %}
+
+
+
+{% block body %}
+   <div class="tile">
+        <p>CONTACT US</p>
+    </div>
+    <section>
+        <div class="contact-tile container container-fluid in-down"><p>Having any <span class="emp"> Query?</span> Share with us !</p> </div>
+        <form class="container container-fluid in-down" method="POST" action="/contact">
+         {% csrf_token %}   
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="inputName" name="name"  placeholder="Enter your Name">
+              </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="inputemail" name="email"  placeholder="youremail@gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="phone" class="form-control" id="inputphone" name="phone"  placeholder="Your Phone">
+              </div>
+            
+            <div class="form-group">
+              <label for="concern">Describe your Query?</label>
+              <textarea class="form-control" id="inputConcern"  name="concern" rows="3"></textarea>
+            </div>
+            <button class="btn btn-danger">Submit</button>
+          </form>
+    </section>
+
+
+    <section id='mapSection' class="container container-fluid">
+        <div>
+            <h1 class="in-left">Reach Us through Google Map</h1><hr>
+        </div>
+        <div class="reachParent in-down">
+            <div class="address">
+                <ul class="contacts-list">
+                    <li class="list-items"><span><i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </span> NH 131 Nevalal Market, Near Hanuman Mandir</li>
+                    <li class="list-items">PAMA Jirwa Nahar, Saharsa</li>
+                    <li id="contact-title">India, Bihar - 852107</li>
+                    <li class="list-items"><span><i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span> Email: kavyaelectricalstores@gmail.com</li>
+                    <li class="list-items"><span><i class="fa fa-phone" aria-hidden="true"></i>
+                    </span>Phone:
+                        +91 709 1247 001</li>
+                    <li class="list-items"><span><i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </span>WhatsApp:
+                        +91 709 1247 001</li>
+                    <li class="list-items"><strong>Our Social Links</strong></li>
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/KavyaElectricalStore/" target="_blank">
+                                <span><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                            </a>
+                        </li>
+                        <li><a href="https://twitter.com/rahul955599" target="_blank">
+                                <span><i class="fa fa-twitter"></i></span>
+                            </a>
+                        </li>
+                        <li><a href="https://www.instagram.com/rahul82877/?hl=en" target="_blank">
+                                <span><i class="fa fa-instagram" aria-hidden="true"></i></span>
+                            </a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/errahulkumarranjan7091/" target="_blank">
+                                <span><i class="fa fa-linkedin"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </ul>
+            </div>
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8542.23854781255!2d86.84836636701472!3d25.817793225097393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x12e4261b42d756a!2sNEVALAL%20MARKET%20PAMA%20JIRWA!5e0!3m2!1sen!2sin!4v1601462716847!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div id="smallmap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8542.23854781255!2d86.84836636701472!3d25.817793225097393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x12e4261b42d756a!2sNEVALAL%20MARKET%20PAMA%20JIRWA!5e0!3m2!1sen!2sin!4v1601462716847!5m2!1sen!2sin" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+        </div>
+    </section>
+
+{% endblock body %}

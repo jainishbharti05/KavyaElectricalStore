@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="shortcut icon" href="../static/images/favicon/20200908_080005.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../static/css/lightbox.min.css">
+    <title> {% block title %}{% endblock title %} Kavya Electricals Store</title>
+</head>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5f7c6d934704467e89f519fb/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+
+<body>
+    <header>
+        <div id="mySidebar" class="sidebar">
+            <a class="logo" href="/">
+                <img src="../static/images/logo.png" alt="">
+            </a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/"><i class="fa fa-home"></i> Home</a>
+            <a href="/about"><i class="fa fa-users"></i> About</a>
+            <a href="/services"><i class="fa fa-pied-piper-pp"></i> Services</a>
+            <a href="/components"><i class="fa fa-rss"></i> Components</a>
+            <a href="/contact"><i class="fa fa-question"></i> Contact Us</a>
+        </div>
+
+        <nav class="trn nav-menu">
+            <ul class="navContact in-down">
+                <div class="navContactItems" id="phone"><span><i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </span> +91 7091247001</div>
+                <div class="navContactItems" id="address"><span><i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </span>NH 131 Nevalal Market, Near Hanuman Mandir, PAMA Jirwa Nahar, Saharsa,Bihar - 852107</div>
+                <div class="navContactItems" id="mail"><span><i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>kavyaelectricalstores@gmail.com</div>
+            </ul>
+            <div id="navBar" class="mainNav">
+                <a href="/" class="logo in-down">
+                    <img src="../static/images/logo.png" alt="">
+                </a>
+                <div id="main">
+                    <a class="openbtn" onclick="openNav()"><i class="fa fa-bars in-down" aria-hidden="true"></i></a>
+                </div>
+                <ul class="navLinks in-down">
+                    <li class="navLink"><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                    <li class="navLink"><a href="/about"><i class="fa fa-users"></i> About</a></li>
+                    <li class="navLink"><a href="/services"><i class="fa fa-pied-piper-pp"></i> Services</a>
+                    </li>
+                    <li class="navLink"><a href="/components"><i class="fa fa-rss"></i> Components </a>
+                    </li>
+                    <li class="navLink"><a href="/contact"><i class="fa fa-question"></i> Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0 mx-0" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    {% block body %}
+    {% endblock body %}
+
+
+
+    <footer>
+        <section class="footer">
+            <div class="footer-head in-down">
+
+                <div class="search-box">
+                    <input type="email" name="email" id="inputEmail" placeholder="Your Email">
+                    <button class=" subscribe">SUBSCRIBE</button>
+                </div>
+
+                <ul class="social-lists">
+                    <li><a href="https://www.facebook.com/KavyaElectricalStore/" target="_blank">
+                            <span><i class="fa fa-facebook invert" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                    <li><a href="https://twitter.com/rahul955599" target="_blank">
+                            <span><i class="fa fa-twitter invert"></i></span>
+                        </a>
+                    </li>
+                    <li><a href="https://www.instagram.com/rahul82877/?hl=en" target="_blank">
+                            <span><i class="fa fa-instagram invert" aria-hidden="true"></i></span>
+                        </a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/errahulkumarranjan7091/" target="_blank">
+                            <span><i class="fa fa-linkedin invert"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-body">
+                <div class="short-intro in-left">
+                    <div class="logo">
+                        <a href="/"><img src="../static/images/logo.png" alt="" height="90px" width="200px"></a>
+                    </div>
+                    <div class="line"></div>
+
+                    <ul class="short-para">
+                        <li>We “Kavya Electricals” are a leading manufacturer, trader and supplier of a superior quality
+                            range of all type of Electrical Panel of Siemen PLC, PLC And Drive Panel, SCADA And HMI
+                            System, Allen Bradly And Mitsubishi PLC.</li>
+                    </ul>
+                </div>
+                <div class="components-area in-down">
+                    <h3>Our Services</h3>
+                    <div class="line"></div>
+                    <ul class="ulist">
+                        <li><a href="/services">Concealed Conduit Wiring</a></li>
+                        <li><a href="/services">Interior Design And Services</a></li>
+                        <li><a href="/services">Alluminium Windows &Doors</a></li>
+                        <li><a href="/services">UPVC Doors</a></li>
+                        <li><a href="/services">Electrical Equipments Instalation</a></li>
+                        <li><a href="/services">Solar Panel Installation</a></li>
+                    </ul>
+                </div>
+                <div class="departments-area in-left">
+                    <h3>Quick Links</h3>
+                    <div class="line"></div>
+                    <ul class="ulist">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/components">Components</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-copyright in-down">
+
+                <div class="copyright-content">
+                    <p>Copyright &copy; 2020 Kavya Electricals Store. All Rights Reserved</p>
+
+                    <a style="color: white;" href="">Privacy Policy</a>
+                </div>
+            </div>
+
+        </section>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="../static/js/script.js"></script>
+    <script src="../static/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
